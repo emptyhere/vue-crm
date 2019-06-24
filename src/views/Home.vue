@@ -1,18 +1,60 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+  <div class="page-title">
+    <h3>Account</h3>
+
+    <button class="btn waves-effect waves-light btn-small">
+      <i class="material-icons">refresh</i>
+    </button>
   </div>
+
+  <div class="row">
+    <div class="col s12 m6 l4">
+      <div class="card light-blue bill-card">
+        <div class="card-content white-text">
+          <span class="card-title">Account in currency</span>
+
+          <p class="currency-line">
+            <span>228.0 Rub</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l8">
+      <div class="card orange darken-3 bill-card">
+        <div class="card-content white-text">
+          <div class="card-header">
+            <span class="card-title">Exchange Rates</span>
+          </div>
+          <table>
+            <thead>
+            <tr>
+              <th>Currency</th>
+              <th>Course</th>
+              <th>Date</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+              <td>Rouble</td>
+              <td>SampleExample</td>
+              <td>SampleExample</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+  name: 'home'
 }
 </script>
