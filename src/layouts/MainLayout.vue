@@ -1,73 +1,38 @@
 <template>
-<div>
-  <div class="app-main-layout">
-    <nav class="navbar orange lighten-1">
-      <div class="nav-wrapper">
-        <div class="navbar-left">
-          <a href="#">
-            <i class="material-icons black-text">dehaze</i>
-          </a>
-          <span class="black-text">SampleExample</span>
-        </div>
+  <div>
+    <div class="app-main-layout">
 
-        <ul class="right hide-on-small-and-down">
-          <li>
-            <a
-                class="dropdown-trigger black-text"
-                href="#"
-                data-target="dropdown"
-            >
-              USER NAME
-              <i class="material-icons right">arrow_drop_down</i>
-            </a>
+      <Navbar @click="isOpen = !isOpen"/>
+      <Sidebar v-model="isOpen"/>
 
-            <ul id='dropdown' class='dropdown-content'>
-              <li>
-                <a href="#" class="black-text">
-                  <i class="material-icons">account_circle</i>Profile
-                </a>
-              </li>
-              <li class="divider" tabindex="-1"></li>
-              <li>
-                <a href="#" class="black-text">
-                  <i class="material-icons">assignment_return</i>Logout
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <main class="app-content" :class="{full: !isOpen}">
+          <div class="app-page">
+              <router-view />
+          </div>
+    </main>
+
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large blue" href="#">
+        <i class="large material-icons">add</i>
+      </a>
       </div>
-    </nav>
 
-    <ul class="sidenav app-sidenav open">
-      <li>
-        <a href="#" class="waves-effect waves-orange pointer">Account</a>
-      </li>
-      <li>
-        <a href="#" class="waves-effect waves-orange pointer">History</a>
-      </li>
-      <li>
-        <a href="#" class="waves-effect waves-orange pointer">Planning</a>
-      </li>
-      <li>
-        <a href="#" class="waves-effect waves-orange pointer">New record</a>
-      </li>
-      <li>
-        <a href="#" class="waves-effect waves-orange pointer">Categories</a>
-      </li>
-    </ul>
-
-    <main class="app-content">
-      <div class="app-page">
-          <router-view />
-      </div>
-</main>
-
-<div class="fixed-action-btn">
-  <a class="btn-floating btn-large blue" href="#">
-    <i class="large material-icons">add</i>
-  </a>
-</div>
-</div>
-</div>
+    </div>
+  </div>
 </template>
+
+<script>
+import Navbar from '@/components/app/Navbar'
+import Sidebar from '@/components/app/Sidebar'
+
+export default {
+  data: () => ({
+    isOpen: true
+  }),
+  components:{
+    Navbar,
+    Sidebar
+  }
+}
+</script>
+
