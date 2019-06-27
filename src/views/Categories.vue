@@ -31,7 +31,7 @@
                     </div>
 
                     <button class="btn waves-effect waves-light" type="submit">
-                    Создать
+                    Create
                     <i class="material-icons right">send</i>
                     </button>
                 </form>
@@ -67,7 +67,7 @@
                     </div>
 
                     <button class="btn waves-effect waves-light" type="submit">
-                    Обновить
+                    Update
                     <i class="material-icons right">send</i>
                     </button>
                 </form>
