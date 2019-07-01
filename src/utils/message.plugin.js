@@ -1,5 +1,5 @@
 export default {
-  install (Vue, option) {
+  install (Vue, options) {
     Vue.prototype.$message = function (html) {
       M.toast({ html })
     }
