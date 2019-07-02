@@ -9,16 +9,18 @@
             <thead>
             <tr>
               <th>Currency</th>
-              <th>Course</th>
+              <th>Rate</th>
               <th>Date</th>
             </tr>
             </thead>
 
             <tbody>
-            <tr>
-              <td>Rouble</td>
-              <td>SampleExample</td>
-              <td>SampleExample</td>
+            <tr 
+            v-for="item in currencies"
+            :key="item">
+              <td>{{item}}</td>
+              <td>{{rates[item].toFixed(5)}}</td>
+              <td>{{date | date('date')}}</td>
             </tr>
             </tbody>
           </table>
@@ -26,3 +28,12 @@
       </div>
     </div>
 </template>
+
+<script>
+export default {
+  props: ['rates', 'date'],
+  data: () => ({
+    currencies: ['RUB', 'USD', 'EUR']
+  })
+}
+</script>

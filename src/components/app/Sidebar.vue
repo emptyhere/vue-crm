@@ -19,7 +19,7 @@ export default {
     data: () => ({
         links:[
             {
-            title: 'Account',
+            title: 'Bill',
             url: '/',
             exact: true
             },

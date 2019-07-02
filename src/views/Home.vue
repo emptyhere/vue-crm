@@ -1,16 +1,20 @@
 <template>
 <div>
   <div class="page-title">
-    <h3>Account</h3>
+    <h3>Bill</h3>
 
-    <button class="btn waves-effect waves-light btn-small">
+    <button class="btn waves-effect waves-light btn-small"
+    @click="refresh">
       <i class="material-icons">refresh</i>
     </button>
   </div>
   <Loader v-if="loading" />
   <div class="row" v-else>
-    <HomeBill />
-    <HomeCurrency />
+    <HomeBill
+    :rates="currency.rates" />
+    <HomeCurrency
+    :rates="currency.rates"
+    :date="currency.date"/>
   </div>
 </div>
 </template>
@@ -25,6 +29,18 @@ export default {
     loading: true,
     currency: null
   }),
+  async mounted() {
+    this.currency = await this.$store.dispatch('fetchCurrency')
+    this.loading = false
+    console.log(this.currency)
+  },
+  methods: {
+    async refresh() {
+      this.loading = true
+      this.currency = await this.$store.dispatch('fetchCurrency')
+      this.loading = false
+    }
+  },
   components: {
     HomeBill, HomeCurrency
   }
