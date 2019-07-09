@@ -62,7 +62,7 @@ export default {
   methods: {
     async onSubmit() {
       if (this.$v.$invalid) {
-        this.$v.touch()
+        this.$v.$touch()
         return
       }
 
