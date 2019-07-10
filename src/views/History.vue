@@ -8,36 +8,42 @@
     <canvas></canvas>
   </div>
 
-  <section>
-    <table>
-      <thead>
-      <tr>
-        <th>#</th>
-        <th>Total</th>
-        <th>Date</th>
-        <th>Category</th>
-        <th>Type</th>
-        <th>Open</th>
-      </tr>
-      </thead>
+  <Loader v-if="loading" />
 
-      <tbody>
-      <tr>
-        <td>1</td>
-        <td>12</td>
-        <td>123</td>
-        <td>name</td>
-        <td>
-          <span class="white-text badge red">Expense</span>
-        </td>
-        <td>
-          <button class="btn-small btn">
-            <i class="material-icons">open_in_new</i>
-          </button>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+  <span v-else-if="!records.length">Records not found.
+    <router-link to="/record">First, add record</router-link>
+  </span>
+
+  <section v-else>
+    <HistoryTable :records="records" />
   </section>
 </div>
 </template>
+
+<script>
+import HistoryTable from '@/components/HistoryTable'
+
+export default {
+  data: () => ({
+    loading: true,
+    records: [],
+    categories: []
+  }),
+  async mounted() {
+    const records = await this.$store.dispatch('fetchRecords')
+    this.categories = await this.$store.dispatch('fetchCategories')
+    this.records = records.map((record) => {
+      return {
+        ...record,
+        categoryName: this.categories.find(c => c.id === record.categoryId).title,
+        typeClass: record.type === 'income' ? 'green' : 'red',
+        typeText: record.type === 'income' ? 'Income' : 'Outcome',
+      }
+    })
+    this.loading = false
+  },
+  components: {
+    HistoryTable
+  }
+}
+</script>
