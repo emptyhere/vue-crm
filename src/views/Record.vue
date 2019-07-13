@@ -1,13 +1,13 @@
 <template>
 <div>
   <div class="page-title">
-    <h3>New record</h3>
+    <h3>{{ "RecordNew" | localize }}</h3>
   </div>
 
   <Loader v-if="loading" />
 
-  <span class="center" v-else-if="!categories.length">Categories not found 
-    <router-link to="/categories">Add new category</router-link>
+  <span class="center" v-else-if="!categories.length">{{ "RecordNotFound" | localize }}
+    <router-link to="/categories">{{ "RecordAdd" | localize }}</router-link>
   </span>
 
   <form class="form" v-else @submit.prevent="onSubmit">
@@ -20,7 +20,7 @@
         :value="item.id">{{item.title}}</option>
       </select>
 
-      <label>Select a category</label>
+      <label>{{ "RecordSelect" | localize }}</label>
     </div>
 
     <p>
@@ -32,7 +32,7 @@
             value="income"
             v-model="type"
         />
-        <span>Income</span>
+        <span>{{ "RecordIncome" | localize }}</span>
       </label>
     </p>
 
@@ -45,7 +45,7 @@
             value="outcome"
             v-model="type"
         />
-        <span>Outcome</span>
+        <span>{{ "RecordOutcome" | localize }}</span>
       </label>
     </p>
 
@@ -56,10 +56,10 @@
           v-model.number="amount"
           :class="{invalid: $v.amount.$dirty && !$v.amount.required}"
       >
-      <label for="amount">Amount</label>
+      <label for="amount">{{ "RecordAmount" | localize }}</label>
         <span class="helper-text invalid"
         v-if="$v.amount.$dirty && !$v.amount.minValue">
-        Minimum value {{$v.amount.$params.minValue.min}}</span>
+        {{ "RecordMinVal" | localize }} {{$v.amount.$params.minValue.min}}</span>
     </div>
 
     <div class="input-field">
@@ -69,13 +69,13 @@
           v-model="description"
           :class="{invalid: $v.description.$dirty && !$v.description.required}"
       >
-      <label for="description">Description</label>
+      <label for="description">{{ "RecordDescription" | localize }}</label>
           <span class="helper-text invalid"
           v-if="$v.description.$dirty && !$v.description.required">
-          Enter the description</span>
+          {{ "RecordEnterDesc" | localize }}</span>
         </div>
       <button class="btn waves-effect waves-light" type="submit">
-        Create
+        {{ "RecordCreate" | localize }}
         <i class="material-icons right">send</i>
       </button>
     </form>

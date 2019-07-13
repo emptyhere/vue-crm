@@ -2,7 +2,7 @@
    <div class="col s12 m6 l4">
       <div class="card light-blue bill-card">
         <div class="card-content white-text">
-          <span class="card-title">Bill in currency</span>
+          <span class="card-title">{{ 'BillCur' | localize }}</span>
 
           <p 
           v-for="item in currencies"
@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import localizeFilter from '@/filters/localize.filter'
+
 export default {
   props: ['rates'],
   data: () => ({

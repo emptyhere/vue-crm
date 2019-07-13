@@ -8,5 +8,54 @@
     "SideBar_History": "History",
     "SideBar_Planning": "Planning",
     "SideBar_Record": "New record",
-    "SideBar_Categories": "Categories"
+    "SideBar_Categories": "Categories",
+
+    "BillCur": "Bill in currency",
+    "BillTitle": "Bill",
+
+    "CurExRate": "Exchange Rates",
+    "CurCurrency": "Currency",
+    "CurRate": "Rate",
+    "CurDate": "Date",
+
+    "HistoryRecord": "Record History",
+    "HistoryAmount": "Amount",
+    "HistoryDate": "Date",
+    "HistoryCategory": "Category",
+    "HistoryType": "Type",
+    "HistoryOpen": "Open",
+    "HistoryNotFound": "Records not found.",
+    "HistoryAddRecord": "First, add record",
+
+    "Income": "Income",
+    "Outcome": "Income",
+
+    "PlanningTitle": "Planning",
+    "PlanningOf": "of",
+    "PlanningNotFound": "Categories not found.",
+    "PlanningAddCategory": "Add new category",
+
+    "RecordNew": "New record",
+    "RecordSelect": "Select a category",
+    "RecordIncome": "Income",
+    "RecordOutcome": "Outcome",
+    "RecordAmount": "Amount",
+    "RecordDescription": "Description",
+    "RecordCreate": "CREATE",
+    "RecordNotFound": "Categories not found.",
+    "RecordAdd": "Add new category",
+    "RecordMiVal": "Minimum value",
+    "RecordEnterDesc": "Enter the description",
+
+    "CategoriesTitle": "Categories",
+    "CategoriesNotFound": "Categories not found",
+    "CategoriesEnterTitle": "Enter the title",
+    "CategoriesCreate": "Create",
+    "CategoriesMiniTitle": "Title",
+    "CategoriesLimit": "Limit",
+    "CategoriesEdit": "Edit",
+    "CategoriesUpdate": "Update",
+
+    "NavbarProfile": "Profile",
+    "NavbarLogout": "Logout"
 }

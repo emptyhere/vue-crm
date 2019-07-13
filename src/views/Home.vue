@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="page-title">
-    <h3>Bill</h3>
+    <h3>{{ 'BillTitle' | localize }}</h3>
 
     <button class="btn waves-effect waves-light btn-small"
     @click="refresh">

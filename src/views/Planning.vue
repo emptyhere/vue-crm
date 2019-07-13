@@ -1,14 +1,14 @@
 <template>
     <div>
   <div class="page-title">
-    <h3>Planning</h3>
+    <h3>{{ 'PlanningTitle' | localize }}</h3>
     <h4>{{info.bill | currency('RUB')}}</h4>
   </div>
 
   <Loader v-if="loading"/>
 
-  <span class="center" v-else-if="!categories.length">Categories not found 
-    <router-link to="/categories">Add new category</router-link>
+  <span class="center" v-else-if="!categories.length">{{ 'PlanningNotFound' | localize }}
+    <router-link to="/categories">{{ 'PlanningAddCategory' | localize }}</router-link>
   </span>
 
   <section v-else>
@@ -16,7 +16,7 @@
     :key="item.id">
       <span>
         <strong>{{item.title}}:</strong>
-        {{item.spend | currency}} of {{item.limit | currency}}
+        {{item.spend | currency}} {{ 'PlanningOf' | localize }} {{item.limit | currency}}
       </span>
       <div class="progress" v-tooltip="item.tooltip">
         <div

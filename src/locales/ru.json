@@ -8,5 +8,56 @@
     "SideBar_History": "История",
     "SideBar_Planning": "Планирование",
     "SideBar_Record": "Новая запись",
-    "SideBar_Categories": "Категории"
+    "SideBar_Categories": "Категории",
+
+    "BillCur": "Счет в валюте",
+    "BillTitle": "Счет",
+
+    "CurExRate": "Курсы валют",
+    "CurCurrency": "Валюта",
+    "CurRate": "Курс",
+    "CurDate": "Дата",
+
+    "HistoryRecord": "История записи",
+    "": "",
+    "HistoryAmount": "Сумма",
+    "HistoryDate": "Дата",
+    "HistoryCategory": "Категория",
+    "HistoryType": "Тип",
+    "HistoryOpen": "Открыть",
+    "HistoryNotFound": "Записи не найдены.",
+    "HistoryAddRecord": "Для начала добавьте запись",
+
+    "Income": "Расход",
+    "Outcome": "Доход",
+
+        
+    "PlanningTitle": "Планирование",
+    "PlanningOf": "из",
+    "PlanningNotFound": "Категории не найдены.",
+    "PlanningAddCategory": "Добавьте новую категорию",
+
+    "RecordNew": "Новая запись",
+    "RecordSelect": "Выберите категорию",
+    "RecordIncome": "Доход",
+    "RecordOutcome": "Расход",
+    "RecordAmount": "Сумма",
+    "RecordDescription": "Описание",
+    "RecordCreate": "СОЗДАТЬ",
+    "RecordNotFound": "Категории не найдены.",
+    "RecordAdd": "Добавьте новую категорию",
+    "RecordMiVal": "Минимальное значение",
+    "RecordEnterDesc": "Введите описание",
+
+    "CategoriesTitle": "Категории",
+    "CategoriesNotFound": "Категории не найдены",
+    "CategoriesEnterTitle": "Введите заголовок",
+    "CategoriesCreate": "Создать",
+    "CategoriesMiniTitle": "Заголовок",
+    "CategoriesLimit": "Лимит",
+    "CategoriesEdit": "Изменить",
+    "CategoriesUpdate": "Обновить",
+
+    "NavbarProfile": "Профиль",
+    "NavbarLogout": "Выход"
 }

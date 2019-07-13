@@ -3,11 +3,11 @@
       <thead>
       <tr>
         <th>#</th>
-        <th>Amount</th>
-        <th>Date</th>
-        <th>Category</th>
-        <th>Type</th>
-        <th>Open</th>
+        <th>{{ 'HistoryAmount' | localize }}</th>
+        <th>{{ 'HistoryDate' | localize }}</th>
+        <th>{{ 'HistoryCategory' | localize }}</th>
+        <th>{{ 'HistoryType' | localize }}</th>
+        <th>{{ 'HistoryOpen' | localize }}</th>
       </tr>
       </thead>
 
